@@ -3,19 +3,50 @@ body {
 	margin: 0;
 	text-align: center;
 }
+
+.top-container h2 {
+	font-weight: normal;
+}
+.top-container {
+	background-color: #e4f9f5;
+	padding-top: 100px;
+	position: relative;
+}
+.top-cloud {
+	animation: loop 20s linear infinite;
+	position: absolute;
+	top: 20px;
+	width: 10%;
+}
+.bird {
+	position: relative;
+	width: 10%;
+	z-index: 5;
+}
 h1 {
 	color: #66bfbf;
 	font-family: "Sacramento", cursive;
 	font-size: 5.625rem; /* 90px */
-	margin: 50px auto 0;
+	margin: 15px auto 0;
 }
 h2 {
 	color: #66bfbf;
 	font-family: "Montserrat", sans-serif;
 	font-size: 2.5rem;
 }
-.top-container h2 {
-	font-weight: normal;
+.web {
+	color: tomato;
+	text-decoration: underline;
+}
+.bottom-cloud {
+	animation: loop-reverse 20s linear infinite;
+	position: absolute;
+	right: 25%;
+	width: 10%;
+}
+.mountain {
+	padding-top: 30px;
+	width: 40%;
 }
 h3 {
 	color: #11999e;
@@ -36,36 +67,12 @@ p {
 	line-height: 2;
 }
 hr {
-	border: dotted 10px #eaf6f6;
+	border: dotted 10px #3cd4da;
 	border-top: none;
-	margin: 100px auto;
+	margin: 75px auto;
 	width: 5%;
 }
-.top-container {
-	background-color: #e4f9f5;
-	padding-top: 100px;
-	position: relative;
-}
-.top-cloud {
-	/* animation: loop 5s linear infinite; */
-	left: 25%;
-	position: absolute;
-	top: 40px;
-	/* width: 10%; */
-}
-/* .bird {
-	width: 5%;
-} */
-.bottom-cloud {
-	/* animation: loop 5s linear reverse infinite; */
-	position: absolute;
-	right: 25%;
-	/* width: 10%; */
-}
-.mountain {
-	padding-top: 30px;
-	width: 50%;
-}
+
 .middle-container {
 	padding: 100px 0;
 }
@@ -76,10 +83,6 @@ hr {
 	margin: auto;
 	text-align: justify;
 	width: 30%;
-}
-.web {
-	color: tomato;
-	text-decoration: underline;
 }
 .profile-picture {
 	border-radius: 50%;
@@ -94,7 +97,6 @@ hr {
 	text-align: justify;
 }
 .code-image {
-	border-radius: 50%;
 	float: left;
 	margin-right: 30px;
 	width: 25%;
@@ -118,9 +120,7 @@ hr {
 	width: 25%;
 }
 .pointer {
-	animation: floating;
-	animation-duration: 0.8s;
-	animation-iteration-count: infinite;
+	animation: floating 0.9s linear infinite;
 	font-size: 25px;
 	position: relative;
 }
@@ -167,19 +167,39 @@ hr {
 		top: 0;
 	}
 	to {
-		top: 30px;
+		top: 50px;
 	}
 }
 @keyframes loop {
-	from {
-		left: -125px;
+	0% {
+		left: 0;
+		transform: translateX(0);
 	}
-	to {
+	50% {
 		left: 100%;
+		transform: translateX(-100%);
+	}
+	100% {
+		left: 0;
+		transform: translateX(0);
+	}
+}
+@keyframes loop-reverse {
+	0% {
+		left: 100%;
+		transform: translateX(-100%);
+	}
+	50% {
+		left: 0;
+		transform: translateX(0);
+	}
+	100% {
+		left: 100%;
+		transform: translateX(-100%);
 	}
 }
 
-/* @media screen and (max-width: 767px) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
 	body {
 		font-size: 14px;
 	}
@@ -191,11 +211,6 @@ hr {
 	}
 	h3 {
 		font-size: 1rem;
-	}
-	.bird {
-		position: relative;
-		top: 30px;
-		width: 10%;
 	}
 	.top-cloud,
 	.bottom-cloud {
@@ -215,17 +230,15 @@ hr {
 	h3 {
 		font-size: 0.87rem;
 	}
+	.bird{
+		width: 15%;
+	}
 	.intro,
 	.contact-message {
 		width: 60%;
-	}
-	.bird {
-		position: relative;
-		top: 30px;
-		width: 10%;
 	}
 	.top-cloud,
 	.bottom-cloud {
 		width: 20%;
 	}
-} */
+}
