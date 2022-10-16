@@ -1,9 +1,10 @@
 body {
+	color: #256d85;
 	font-family: "Merriweather", serif;
 	margin: 0;
 	text-align: center;
 }
-
+/* Header styles */
 .top-container h2 {
 	font-weight: normal;
 }
@@ -27,13 +28,14 @@ h1 {
 	color: #66bfbf;
 	font-family: "Sacramento", cursive;
 	font-size: 5.625rem; /* 90px */
+	font-weight: 800;
 	margin: 15px auto 0;
 }
 h2 {
 	color: #66bfbf;
 	font-family: "Montserrat", sans-serif;
-	font-weight: 600;
 	font-size: 2.5rem;
+	font-weight: 600;
 }
 .web {
 	color: tomato;
@@ -53,6 +55,7 @@ h3 {
 	color: #11999e;
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.5rem;
+	font-weight: 600;
 }
 a {
 	color: #11999e;
@@ -73,11 +76,12 @@ hr {
 	margin: 75px auto;
 	width: 7%;
 }
-
+/* main styling */
 .middle-container {
 	padding: 100px 0;
 }
 .profile-picture {
+	margin-bottom: 30px;
 	width: 20%;
 }
 .intro {
@@ -125,6 +129,7 @@ hr {
 	font-size: 25px;
 	position: relative;
 }
+/* button styles */
 .btn {
 	background: #11cdd4;
 	background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
@@ -152,6 +157,7 @@ hr {
 	text-decoration: none;
 }
 
+/* footer style */
 .bottom-container {
 	background-color: #66bfbf;
 	padding: 50px 0 20px;
@@ -163,6 +169,7 @@ hr {
 	padding: 20px 0;
 }
 
+/* animations */
 @keyframes floating {
 	from {
 		top: 0;
@@ -199,7 +206,7 @@ hr {
 		transform: translateX(-100%);
 	}
 }
-
+/* Media Queries */
 @media screen and (min-width: 481px) and (max-width: 768px) {
 	body {
 		font-size: 14px;
@@ -231,7 +238,7 @@ hr {
 	h3 {
 		font-size: 0.87rem;
 	}
-	.bird{
+	.bird {
 		width: 15%;
 	}
 	.intro,
