@@ -67,10 +67,10 @@ p {
 	line-height: 2;
 }
 hr {
-	border: dotted 10px #3cd4da;
+	border: dotted 7px #3cd4da;
 	border-top: none;
 	margin: 75px auto;
-	width: 5%;
+	width: 7%;
 }
 
 .middle-container {
@@ -199,7 +199,7 @@ hr {
 	}
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
 	body {
 		font-size: 14px;
 	}
@@ -207,7 +207,7 @@ hr {
 		font-size: 3.75rem;
 	}
 	h2 {
-		font-size: 1.67rem;
+		font-size: 2rem;
 	}
 	h3 {
 		font-size: 1rem;
@@ -225,7 +225,7 @@ hr {
 		font-size: 2rem;
 	}
 	h2 {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 	h3 {
 		font-size: 0.87rem;
